@@ -3,8 +3,13 @@ const express = require('express')
 const path = require('path')
 const favicon = require('serve-favicon')
 const logger = require('morgan')
+const mongoose = require('mongoose')
 
-const apiRouter = require('./routes/book')
+mongoose.connect('mongodb://localhost/mean-crud', { promiseLibrary: require('bluebird') })
+  .then(() =>  console.log('connection successful'))
+  .catch((err) => console.error(err))
+
+const apiRouter = require('./routes/api')
 
 const app = express()
 
@@ -14,7 +19,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'dist/mean-crud')))
 app.use('/', express.static(path.join(__dirname, 'dist/mean-crud')))
-app.use('api', apiRouter)
+app.use('/api', apiRouter)
 
 app.use((req, res,next) => {
     next(createError(404))
