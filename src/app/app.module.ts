@@ -5,40 +5,40 @@ import { FormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
-import { BuckComponent } from './buck/buck.component';
-import { BuckDetailComponent } from './buck-detail/buck-detail.component';
-import { BuckCreateComponent } from './buck-create/buck-create.component';
-import { BuckEditComponent } from './buck-edit/buck-edit.component';
-import { BuckDeleteComponent } from './buck-delete/buck-delete.component';
+import { RosterComponent } from './roster/roster.component';
+import { RosterCreateComponent } from './roster-create/roster-create.component';
+import { RosterEditComponent } from './roster-edit/roster-edit.component';
+import { RosterDetailComponent } from './roster-detail/roster-detail.component';
+import { RosterDeleteComponent } from './roster-delete/roster-delete.component';
 
 const appRoutes: Routes = [
   {
-    path: 'bucks',
-    component: BuckComponent,
-    data: { title: 'Bucks Roster' }
+    path: 'roster',
+    component: RosterComponent,
+    data: { title: 'Buck\'s Roster' }
   },
   {
-    path: 'buck-details/:id',
-    component: BuckDetailComponent,
-    data: { title: 'Buck Details' }
+    path: 'roster-details/:id',
+    component: RosterDetailComponent,
+    data: { title: 'Roster Details' }
   },
   {
-    path: 'buck-create',
-    component: BuckCreateComponent,
-    data: { title: 'Add a Buck' }
+    path: 'roster-create',
+    component: RosterCreateComponent,
+    data: { title: 'Add a Player' }
   },
   {
-    path: 'buck-edit/:id',
-    component: BuckEditComponent,
-    data: { title: 'Edit Buck' }
+    path: 'roster-edit/:id',
+    component: RosterEditComponent,
+    data: { title: 'Edit Roster' }
   },
   {
-    path: 'buck-delete/:id',
-    component: BuckDeleteComponent,
-    data: { title: 'Waive a buck' }
+    path: 'roster-delete/:id',
+    component: RosterDeleteComponent,
+    data: { title: 'Waive a Player' }
   },
   { path: '',
-    redirectTo: '/bucks',
+    redirectTo: '/roster',
     pathMatch: 'full'
   }
 ]
@@ -46,11 +46,11 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    BuckComponent,
-    BuckDetailComponent,
-    BuckCreateComponent,
-    BuckEditComponent,
-    BuckDeleteComponent
+    RosterComponent,
+    RosterCreateComponent,
+    RosterEditComponent,
+    RosterDetailComponent,
+    RosterDeleteComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BuckDeleteComponent } from './buck-delete.component';
+import { RosterComponent } from './roster.component';
 
-describe('BuckDeleteComponent', () => {
-  let component: BuckDeleteComponent;
-  let fixture: ComponentFixture<BuckDeleteComponent>;
+describe('RosterComponent', () => {
+  let component: RosterComponent;
+  let fixture: ComponentFixture<RosterComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BuckDeleteComponent ]
+      declarations: [ RosterComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BuckDeleteComponent);
+    fixture = TestBed.createComponent(RosterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
