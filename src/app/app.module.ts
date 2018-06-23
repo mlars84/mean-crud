@@ -5,11 +5,11 @@ import { FormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
-import { RosterComponent } from './roster/roster.component';
-import { RosterCreateComponent } from './roster-create/roster-create.component';
-import { RosterEditComponent } from './roster-edit/roster-edit.component';
-import { RosterDetailComponent } from './roster-detail/roster-detail.component';
-import { RosterDeleteComponent } from './roster-delete/roster-delete.component';
+import { RosterComponent } from './components/roster/roster.component';
+import { RosterCreateComponent } from './components/roster-create/roster-create.component';
+import { RosterEditComponent } from './components/roster-edit/roster-edit.component';
+import { RosterDetailComponent } from './components/roster-detail/roster-detail.component';
+import { RosterDeleteComponent } from './components/roster-delete/roster-delete.component';
 
 const appRoutes: Routes = [
   {

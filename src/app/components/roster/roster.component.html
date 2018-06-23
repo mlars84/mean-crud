@@ -3,10 +3,10 @@
       <img class="card-img-top" src="..." alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">{{ player.name }}</h5>
-        <p class="card-text" *ngFor="let ">
-          {{  }}
+        <p class="card-text" *ngFor="let stat of playoffStats">
+          {{ stat.PPG }}
         </p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <a [routerLink]="['/roster-delete']" class="btn btn-primary">Waive</a>
       </div>
     </div>
 </li>

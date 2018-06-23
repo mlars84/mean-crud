@@ -1,0 +1,10 @@
+@import '../../../../src/styles-variables.scss';
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: $primary !important;
+}
+
+.card {
+    background-color: $secondary;
+    padding: 1em;
+}
