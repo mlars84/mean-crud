@@ -3,10 +3,9 @@
       <img class="card-img-top" src="..." alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">{{ player.name }}</h5>
-        <p class="card-text" *ngFor="let stat of playoffStats">
-          {{ stat.PPG }}
-        </p>
+        <p class="card-text">{{ playoffPPG }}</p>
         <a [routerLink]="['/roster-delete/player.id']" class="btn btn-primary">Waive</a>
+        <a [routerLink]="['/roster-edit/player.id']" class="btn btn-default">Update</a>
       </div>
     </div>
 </li>

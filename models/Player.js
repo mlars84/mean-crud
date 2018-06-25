@@ -6,11 +6,9 @@ const PlayerSchema = new mongoose.Schema({
   height: String,
   weight: String,
   DOB: String,
-  playoffStats: {
-    PPG: Number,
-    RPG: Number,
-    APG: Number
-  }
+  playoffPPG: Number,
+  playoffRPG: Number,
+  playoffAPG: Number
 })
 
 module.exports = mongoose.model('Player', PlayerSchema)

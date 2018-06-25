@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from '../../../api.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { ApiService } from '../../../api.service';
 })
 export class RosterDetailComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private api: ApiService) { }
+  constructor(private route: ActivatedRoute, private api: ApiService, private router: Router) { }
 
   player = {}
 
@@ -18,6 +18,15 @@ export class RosterDetailComponent implements OnInit {
       .subscribe(data => {
         console.log(data);
         this.player = data;
+      });
+  }
+
+  deletePlayer (id) {
+    this.api.deletePlayer(id)
+      .subscribe(res => {
+        this.router.navigate(['/roster'])
+      }, (err) => {
+        console.log(err)
       });
   }
 

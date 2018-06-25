@@ -19,7 +19,9 @@ export class RosterCreateComponent implements OnInit {
   height:string='';
   weight:string='';
   DOB:string='';
-  playoffStats:object={};
+  playoffPPG:number;
+  playoffRPG:number;
+  playoffAPG:number;
 
   ngOnInit() {
     this.rosterForm = this.formBuilder.group({
@@ -28,7 +30,9 @@ export class RosterCreateComponent implements OnInit {
       'height' : [null, Validators.required],
       'weight' : [null, Validators.required],
       'DOB' : [null, Validators.required],
-      'playoffStats' : [null, Validators.required]
+      'playoffPPG' : [null, Validators.required],
+      'playoffRPG' : [null, Validators.required],
+      'playoffAPG' : [null, Validators.required]
     })
   }
 

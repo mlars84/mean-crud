@@ -40,28 +40,28 @@
     </span>
   </div>
   <div class="form-group">
-    <input class="form-control" placeholder="PPG" formControlName="PPG">
+    <input class="form-control" placeholder="PPG" formControlName="playoffPPG">
     <span 
-      *ngIf="!rosterForm.get('PPG').valid && fosterForm.get('PPG').touched"
+      *ngIf="!rosterForm.get('playoffPPG').valid && fosterForm.get('playoffPPG').touched"
     >
       Please enter a Player's Points Per Game
     </span>
   </div>
   <div class="form-group">
-    <input class="form-control" placeholder="RPG" formControlName="RPG">
+    <input class="form-control" placeholder="RPG" formControlName="playoffRPG">
     <span 
-      *ngIf="!rosterForm.get('RPG').valid && fosterForm.get('RPG').touched"
+      *ngIf="!rosterForm.get('playoffRPG').valid && fosterForm.get('playoffRPG').touched"
     >
       Please enter a Player's Rebounds Per Game
     </span>
   </div>
-    <div class="form-group">
-      <input class="form-control" placeholder="APG" formControlName="APG">
-      <span 
-        *ngIf="!rosterForm.get('APG').valid && fosterForm.get('APG').touched"
-      >
-        Please enter a Player's Assists Per Game
-      </span>
-    </div>
+  <div class="form-group">
+    <input class="form-control" placeholder="APG" formControlName="playoffAPG">
+    <span 
+      *ngIf="!rosterForm.get('playoffAPG').valid && fosterForm.get('playoffAPG').touched"
+    >
+      Please enter a Player's Assists Per Game
+    </span>
+  </div>
     <button class="btn btn-default" type="submit">Submit</button>
 </form>

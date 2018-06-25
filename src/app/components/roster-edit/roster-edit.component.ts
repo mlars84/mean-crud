@@ -20,7 +20,9 @@ export class RosterEditComponent implements OnInit {
   height:string = '';
   weight:string = '';
   DOB:string = '';
-  playoffStats:Object = {};
+  playoffPPG:number;
+  playoffRPG:number;
+  playoffAPG:number;
 
   ngOnInit() {
     this.getPlayer(this.route.snapshot.params['id']);
@@ -30,7 +32,9 @@ export class RosterEditComponent implements OnInit {
       'height': [null, Validators.required],
       'weight': [null, Validators.required],
       'DOB': [null, Validators.required],
-      'playoffStats': [null, Validators.required]
+      'playoffPPG': [null, Validators.required],
+      'playoffRPG': [null, Validators.required],
+      'playoffAPG': [null, Validators.required]
     })
   }
 
@@ -43,7 +47,9 @@ export class RosterEditComponent implements OnInit {
         height: data.height,
         weight: data.weight,
         DOB: data.DOB,
-        playoffStats: data.playoffStats
+        playoffPPG: data.playoffPPG,
+        playoffRPG: data.playoffRPG,
+        playoffAPG: data.playoffAPG
       });
     });
   }
