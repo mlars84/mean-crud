@@ -15,7 +15,7 @@ export class RosterCreateComponent implements OnInit {
 
   rosterForm: FormGroup;
   name:string='';
-  jerseyNumber:number=1;
+  jerseyNumber:number;
   height:string='';
   weight:string='';
   DOB:string='';

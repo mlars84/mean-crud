@@ -1,3 +1,37 @@
-<p>
-  roster-edit works!
-</p>
+<div class="btn-group">
+  <button class="btn btn-primary" (click)="playerDetails()">Player Details</button>
+</div>
+<form [formGroup]="rosterForm" (ngSubmit)="onFormSubmit(rosterForm.value)">
+  <div class="form-group">
+    <input class="form-control" placeholder="name" formControlName="name">
+    <span *ngIf="!rosterForm.get('name').valid && rosterForm.get('name').touched"></span>
+  </div>
+  <div class="form-group">
+    <input class="form-control" placeholder="jerseyNumber" formControlName="jerseyNumber">
+    <span *ngIf="!rosterForm.get('jerseyNumber').valid && rosterForm.get('jerseyNumber').touched"></span>
+  </div>
+  <div class="form-group">
+    <input class="form-control" placeholder="height" formControlName="height">
+    <span *ngIf="!rosterForm.get('height').valid && rosterForm.get('height').touched"></span>
+  </div>
+  <div class="form-group">
+    <input class="form-control" placeholder="weight" formControlName="weight">
+    <span *ngIf="!rosterForm.get('weight').valid && rosterForm.get('weight').touched"></span>
+  </div>
+  <div class="form-group">
+    <input class="form-control" placeholder="DOB" formControlName="DOB">
+    <span *ngIf="!rosterForm.get('DOB').valid && rosterForm.get('DOB').touched"></span>
+  </div>
+  <div class="form-group">
+    <input class="form-control" placeholder="PPG" formControlName="playoffStats.PPG">
+    <span *ngIf="!rosterForm.get('playoffStats.PPG').valid && rosterForm.get('playoffStats.PPG').touched"></span>
+  </div>
+  <div class="form-group">
+    <input class="form-control" placeholder="RPG" formControlName="playoffStats.RPG">
+    <span *ngIf="!rosterForm.get('playoffStats.RPG').valid && rosterForm.get('playoffStats.RPG').touched"></span>
+  </div>
+  <div class="form-group">
+    <input class="form-control" placeholder="APG" formControlName="playoffStats.APG">
+    <span *ngIf="!rosterForm.get('playoffStats.APG').valid && rosterForm.get('playoffStats.APG').touched"></span>
+  </div>
+</form>

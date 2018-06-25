@@ -54,7 +54,7 @@ export class ApiService {
       );
   }
   
-  updatePlayer(data): Observable<any> {
+  updatePlayer(id: string, data): Observable<any> {
     return this.http.put(apiUrl, data, httpOptions)
       .pipe(
         catchError(this.handleError)
