@@ -1,3 +1,67 @@
-<p>
-  roster-create works!
-</p>
+<form [formGroup]="rosterForm" (ngSubmit)="onFormSubmit(rosterForm.value)">
+  <div class="form-group">
+    <input class="form-control" placeholder="name" formControlName="name">
+    <span 
+      *ngIf="!rosterForm.get('name').valid && fosterForm.get('name').touched"
+    >
+      Please enter a Player's name
+    </span>
+  </div>
+  <div class="form-group">
+    <input class="form-control" placeholder="jerseyNumber" formControlName="jerseyNumber">
+    <span 
+      *ngIf="!rosterForm.get('jerseyNumber').valid && fosterForm.get('jerseyNumber').touched"
+    >
+      Please enter a Player's jersey number
+    </span>
+  </div>
+  <div class="form-group">
+    <input class="form-control" placeholder="height" formControlName="height">
+    <span 
+      *ngIf="!rosterForm.get('height').valid && fosterForm.get('height').touched"
+    >
+      Please enter a Player's height
+    </span>
+  </div>
+  <div class="form-group">
+    <input class="form-control" placeholder="weight" formControlName="weight">
+    <span 
+      *ngIf="!rosterForm.get('weight').valid && fosterForm.get('weight').touched"
+    >
+      Please enter a Player's weight
+    </span>
+  </div>
+  <div class="form-group">
+    <input class="form-control" placeholder="DOB" formControlName="DOB">
+    <span 
+      *ngIf="!rosterForm.get('DOB').valid && fosterForm.get('DOB').touched"
+    >
+      Please enter a Player's Date Of Birth
+    </span>
+  </div>
+  <div class="form-group">
+    <input class="form-control" placeholder="PPG" formControlName="PPG">
+    <span 
+      *ngIf="!rosterForm.get('PPG').valid && fosterForm.get('PPG').touched"
+    >
+      Please enter a Player's Points Per Game
+    </span>
+  </div>
+  <div class="form-group">
+    <input class="form-control" placeholder="RPG" formControlName="RPG">
+    <span 
+      *ngIf="!rosterForm.get('RPG').valid && fosterForm.get('RPG').touched"
+    >
+      Please enter a Player's Rebounds Per Game
+    </span>
+  </div>
+    <div class="form-group">
+      <input class="form-control" placeholder="APG" formControlName="APG">
+      <span 
+        *ngIf="!rosterForm.get('APG').valid && fosterForm.get('APG').touched"
+      >
+        Please enter a Player's Assists Per Game
+      </span>
+    </div>
+    <button class="btn btn-default" type="submit">Submit</button>
+</form>

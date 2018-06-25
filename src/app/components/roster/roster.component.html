@@ -6,7 +6,7 @@
         <p class="card-text" *ngFor="let stat of playoffStats">
           {{ stat.PPG }}
         </p>
-        <a [routerLink]="['/roster-delete']" class="btn btn-primary">Waive</a>
+        <a [routerLink]="['/roster-delete/player.id']" class="btn btn-primary">Waive</a>
       </div>
     </div>
 </li>
