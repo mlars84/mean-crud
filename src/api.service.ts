@@ -34,34 +34,34 @@ export class ApiService {
     return body || {}
   }
 
-  getRoster(): Observable<any> {
+  getRoster (): Observable<any> {
     return this.http.get(apiUrl, httpOptions).pipe(
       map(this.getData),
       catchError(this.handleError));
   }
   
-  getPlayer(id: string): Observable<any> {
+  getPlayer (id: string): Observable<any> {
     const url = `${apiUrl}/${id}`;
     return this.http.get(url, httpOptions).pipe(
       map(this.getData),
       catchError(this.handleError));
   }
   
-  postPlayer(data): Observable<any> {
+  postPlayer (data): Observable<any> {
     return this.http.post(apiUrl, data, httpOptions)
       .pipe(
         catchError(this.handleError)
       );
   }
   
-  updatePlayer(id: string, data): Observable<any> {
+  updatePlayer (id: string, data): Observable<any> {
     return this.http.put(apiUrl, data, httpOptions)
       .pipe(
         catchError(this.handleError)
       );
   }
   
-  deletePlayer(id: string): Observable<{}> {
+  deletePlayer (id: string): Observable<{}> {
     const url = `${apiUrl}/${id}`;
     return this.http.delete(url, httpOptions)
       .pipe(

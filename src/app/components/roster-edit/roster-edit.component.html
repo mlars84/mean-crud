@@ -23,15 +23,16 @@
     <span *ngIf="!rosterForm.get('DOB').valid && rosterForm.get('DOB').touched"></span>
   </div>
   <div class="form-group">
-    <input class="form-control" placeholder="PPG" formControlName="playoffStats.PPG">
-    <span *ngIf="!rosterForm.get('playoffStats.PPG').valid && rosterForm.get('playoffStats.PPG').touched"></span>
+    <input class="form-control" placeholder="PPG" formControlName="playoffPPG">
+    <span *ngIf="!rosterForm.get('playoffPPG').valid && rosterForm.get('playoffPPG').touched"></span>
   </div>
   <div class="form-group">
-    <input class="form-control" placeholder="RPG" formControlName="playoffStats.RPG">
-    <span *ngIf="!rosterForm.get('playoffStats.RPG').valid && rosterForm.get('playoffStats.RPG').touched"></span>
+    <input class="form-control" placeholder="RPG" formControlName="playoffRPG">
+    <span *ngIf="!rosterForm.get('playoffRPG').valid && rosterForm.get('playoffRPG').touched"></span>
   </div>
   <div class="form-group">
-    <input class="form-control" placeholder="APG" formControlName="playoffStats.APG">
-    <span *ngIf="!rosterForm.get('playoffStats.APG').valid && rosterForm.get('playoffStats.APG').touched"></span>
+    <input class="form-control" placeholder="APG" formControlName="playoffAPG">
+    <span *ngIf="!rosterForm.get('playoffAPG').valid && rosterForm.get('playoffAPG').touched"></span>
   </div>
+  <button class="btn btn-default" type="submit" [disabled]="!rosterForm.valid">Save</button>
 </form>

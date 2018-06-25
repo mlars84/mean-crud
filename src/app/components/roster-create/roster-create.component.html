@@ -1,8 +1,11 @@
+<div class="btn-group">
+  <button class="btn btn-primary" [routerLink]="['/roster']">List</button>
+</div>
 <form [formGroup]="rosterForm" (ngSubmit)="onFormSubmit(rosterForm.value)">
   <div class="form-group">
     <input class="form-control" placeholder="name" formControlName="name">
     <span 
-      *ngIf="!rosterForm.get('name').valid && fosterForm.get('name').touched"
+      *ngIf="!rosterForm.get('name').valid && rosterForm.get('name').touched"
     >
       Please enter a Player's name
     </span>
@@ -10,7 +13,7 @@
   <div class="form-group">
     <input class="form-control" placeholder="jerseyNumber" formControlName="jerseyNumber">
     <span 
-      *ngIf="!rosterForm.get('jerseyNumber').valid && fosterForm.get('jerseyNumber').touched"
+      *ngIf="!rosterForm.get('jerseyNumber').valid && rosterForm.get('jerseyNumber').touched"
     >
       Please enter a Player's jersey number
     </span>
@@ -18,7 +21,7 @@
   <div class="form-group">
     <input class="form-control" placeholder="height" formControlName="height">
     <span 
-      *ngIf="!rosterForm.get('height').valid && fosterForm.get('height').touched"
+      *ngIf="!rosterForm.get('height').valid && rosterForm.get('height').touched"
     >
       Please enter a Player's height
     </span>
@@ -26,7 +29,7 @@
   <div class="form-group">
     <input class="form-control" placeholder="weight" formControlName="weight">
     <span 
-      *ngIf="!rosterForm.get('weight').valid && fosterForm.get('weight').touched"
+      *ngIf="!rosterForm.get('weight').valid && rosterForm.get('weight').touched"
     >
       Please enter a Player's weight
     </span>
@@ -34,7 +37,7 @@
   <div class="form-group">
     <input class="form-control" placeholder="DOB" formControlName="DOB">
     <span 
-      *ngIf="!rosterForm.get('DOB').valid && fosterForm.get('DOB').touched"
+      *ngIf="!rosterForm.get('DOB').valid && rosterForm.get('DOB').touched"
     >
       Please enter a Player's Date Of Birth
     </span>
@@ -42,7 +45,7 @@
   <div class="form-group">
     <input class="form-control" placeholder="PPG" formControlName="playoffPPG">
     <span 
-      *ngIf="!rosterForm.get('playoffPPG').valid && fosterForm.get('playoffPPG').touched"
+      *ngIf="!rosterForm.get('playoffPPG').valid && rosterForm.get('playoffPPG').touched"
     >
       Please enter a Player's Points Per Game
     </span>
@@ -50,7 +53,7 @@
   <div class="form-group">
     <input class="form-control" placeholder="RPG" formControlName="playoffRPG">
     <span 
-      *ngIf="!rosterForm.get('playoffRPG').valid && fosterForm.get('playoffRPG').touched"
+      *ngIf="!rosterForm.get('playoffRPG').valid && rosterForm.get('playoffRPG').touched"
     >
       Please enter a Player's Rebounds Per Game
     </span>
@@ -58,10 +61,10 @@
   <div class="form-group">
     <input class="form-control" placeholder="APG" formControlName="playoffAPG">
     <span 
-      *ngIf="!rosterForm.get('playoffAPG').valid && fosterForm.get('playoffAPG').touched"
+      *ngIf="!rosterForm.get('playoffAPG').valid && rosterForm.get('playoffAPG').touched"
     >
       Please enter a Player's Assists Per Game
     </span>
   </div>
-    <button class="btn btn-default" type="submit">Submit</button>
+    <button class="btn btn-default" type="submit" [disabled]="!rosterForm.valid">Submit</button>
 </form>

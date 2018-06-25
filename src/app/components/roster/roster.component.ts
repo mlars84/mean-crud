@@ -16,7 +16,6 @@ export class RosterComponent implements OnInit {
   ngOnInit() {
     this.api.getRoster()
       .subscribe(res => {
-        console.log(res)
         this.roster = res
       }, err => {
         console.log(err)

@@ -16,7 +16,6 @@ export class RosterDetailComponent implements OnInit {
   getRosterDetails(id) {
     this.api.getPlayer(id)
       .subscribe(data => {
-        console.log(data);
         this.player = data;
       });
   }

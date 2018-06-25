@@ -35,7 +35,7 @@ export class RosterEditComponent implements OnInit {
       'playoffPPG': [null, Validators.required],
       'playoffRPG': [null, Validators.required],
       'playoffAPG': [null, Validators.required]
-    })
+    });
   }
 
   getPlayer (id) {
@@ -58,7 +58,7 @@ export class RosterEditComponent implements OnInit {
     this.api.updatePlayer(this.id, form)
       .subscribe(res => {
         let id = res['_id'];
-        this.router.navigate(['/roster-details', this.id]);
+        this.router.navigate(['/roster-details', id]);
       }, (err) => {
         console.log(err);
       }

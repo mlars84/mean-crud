@@ -37,14 +37,13 @@ export class RosterCreateComponent implements OnInit {
   }
 
   onFormSubmit(form:NgForm) {
-    console.log(form)
     this.api.postPlayer(form)
       .subscribe(res => {
-        let id = res['_id'];
-        this.router.navigate(['/roster-details', id])
-      }, (err) => {
-        console.log(err)
-      });
+          let id = res['_id'];
+          this.router.navigate(['/roster-details', id]);
+        }, (err) => {
+          console.log(err);
+        });
   }
 
 }
