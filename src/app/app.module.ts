@@ -9,39 +9,33 @@ import { RosterComponent } from './components/roster/roster.component';
 import { RosterCreateComponent } from './components/roster-create/roster-create.component';
 import { RosterEditComponent } from './components/roster-edit/roster-edit.component';
 import { RosterDetailComponent } from './components/roster-detail/roster-detail.component';
-import { RosterDeleteComponent } from './components/roster-delete/roster-delete.component';
 
 const appRoutes: Routes = [
   {
     path: 'roster',
     component: RosterComponent,
-    data: { title: 'Buck\'s Roster' }
+    data: { title: 'Player List' }
   },
   {
     path: 'roster-details/:id',
     component: RosterDetailComponent,
-    data: { title: 'Roster Details' }
+    data: { title: 'Player Details' }
   },
   {
     path: 'roster-create',
     component: RosterCreateComponent,
-    data: { title: 'Add a Player' }
+    data: { title: 'Add Player' }
   },
   {
     path: 'roster-edit/:id',
     component: RosterEditComponent,
-    data: { title: 'Edit Roster' }
-  },
-  {
-    path: 'roster-delete/:id',
-    component: RosterDeleteComponent,
-    data: { title: 'Waive a Player' }
+    data: { title: 'Edit Player' }
   },
   { path: '',
     redirectTo: '/roster',
     pathMatch: 'full'
   }
-]
+];
 
 @NgModule({
   declarations: [
@@ -49,8 +43,7 @@ const appRoutes: Routes = [
     RosterComponent,
     RosterCreateComponent,
     RosterEditComponent,
-    RosterDetailComponent,
-    RosterDeleteComponent
+    RosterDetailComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

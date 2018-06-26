@@ -7,10 +7,10 @@
     <h5 class="card-title">{{ player._id }}</h5>
     <dl>
       <dt>Name: </dt>
-      <dd>{{ player.name }}</dd>
+      <dd *ngIf="player.name">{{ player.name }}</dd>
     </dl>
   </div>
 </div>
 
 <button class="btn btn-primary" [routerLink]="['/roster-edit', player._id]">Edit</button>
-<button class="btn btn-warning" [routerLink]="deletePlayer(player._id)">Delete</button>
+<button class="btn btn-warning" (click)="deletePlayer(player._id)">Delete</button>
