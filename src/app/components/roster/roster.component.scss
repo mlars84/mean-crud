@@ -1,10 +1,18 @@
 @import '../../../../src/styles-variables.scss';
 
-.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-    background-color: $primary !important;
+div.card {
+    background-color: $secondary;
+    padding: 2em;
 }
 
-.card {
-    background-color: $secondary;
-    padding: 1em;
+li {
+    list-style: none;
+}
+
+h1.jersey-number {
+    color: $primary;
+}
+
+a {
+    color: $harley-orange;
 }

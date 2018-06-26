@@ -1,13 +1,22 @@
-<li *ngFor="let player of roster">
-  <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">{{ player.name }}</h5>
-        <p class="card-text">{{ player.playoffPPG }}</p>
-        <a [routerLink]="['/roster-edit/', player._id]" class="btn btn-default">Update</a>
-        <a [routerLink]="['/roster-details/', player._id]" class="btn btn-default">Details</a>
+<div class="col-sm-4">
+  <li *ngFor="let player of roster">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{ player.name }}</h5>
+          <h1 class="jersey-number">{{ player.jerseyNumber }}</h1>
+          <h5 class="card-title">2018 Playoff Stats</h5>
+          <p class="card-text">PPG: {{ player.playoffPPG }}</p>
+          <hr>
+          <p class="card-text">RPG: {{ player.playoffRPG }}</p>
+          <hr>
+          <p class="card-text">APG: {{ player.playoffAPG }}</p>
+          <hr>
+          <a [routerLink]="['/roster-edit/', player._id]" class="btn btn-default">Update</a>
+          <a [routerLink]="['/roster-details/', player._id]" class="btn btn-default">Details</a>
+        </div>
       </div>
-    </div>
-</li>
+  </li>
+</div>
+
 
 

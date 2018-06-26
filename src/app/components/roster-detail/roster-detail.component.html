@@ -1,16 +1,21 @@
 <div class="btn-group">
-  <button class="btn btn-default" [routerLink]="['/roster']"></button>
+  <button class="btn btn-default" [routerLink]="['/roster']">Roster List</button>
 </div>
 
 <div class="card">
   <div class="card-body">
-    <h5 class="card-title">{{ player._id }}</h5>
     <dl>
       <dt>Name: </dt>
-      <dd *ngIf="player.name">{{ player.name }}</dd>
+      <dd>{{ player.name }}</dd>
+      <dt>Height: </dt>
+      <dd>{{ player.height }}</dd>
+      <dt>Weight: </dt>
+      <dd>{{ player.weight }}</dd>
+      <dt>DOB: </dt>
+      <dd>{{ player.DOB }}</dd>
     </dl>
   </div>
 </div>
 
-<button class="btn btn-primary" [routerLink]="['/roster-edit', player._id]">Edit</button>
-<button class="btn btn-warning" (click)="deletePlayer(player._id)">Delete</button>
+<button class="btn btn-default" [routerLink]="['/roster-edit', player._id]">Edit</button>
+<button class="btn btn-default" (click)="deletePlayer(player._id)">Waive</button>
