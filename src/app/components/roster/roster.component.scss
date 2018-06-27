@@ -2,11 +2,11 @@
 
 div.card {
     background-color: $secondary;
-    padding: 2em;
 }
 
 li {
     list-style: none;
+    padding-bottom: 1em;
 }
 
 h1.jersey-number {
@@ -16,3 +16,5 @@ h1.jersey-number {
 a {
     color: $harley-orange;
 }
+
+:host{ flex: 1; }

@@ -2,65 +2,65 @@
   <button class="btn btn-default" [routerLink]="['/roster']">Roster List</button>
 </div>
 <form [formGroup]="rosterForm" (ngSubmit)="onFormSubmit(rosterForm.value)">
-  <div class="form-group">
+  <div class="form-group has-error">
     <input class="form-control" placeholder="name" formControlName="name">
-    <span 
+    <span class="text-danger"
       *ngIf="!rosterForm.get('name').valid && rosterForm.get('name').touched"
     >
       Please enter a Player's name
     </span>
   </div>
-  <div class="form-group">
+  <div class="form-group has-error">
     <input class="form-control" placeholder="jerseyNumber" formControlName="jerseyNumber">
-    <span 
+    <span class="text-danger"
       *ngIf="!rosterForm.get('jerseyNumber').valid && rosterForm.get('jerseyNumber').touched"
     >
       Please enter a Player's jersey number
     </span>
   </div>
-  <div class="form-group">
+  <div class="form-group has-error">
     <input class="form-control" placeholder="height" formControlName="height">
-    <span 
+    <span class="text-danger" 
       *ngIf="!rosterForm.get('height').valid && rosterForm.get('height').touched"
     >
       Please enter a Player's height
     </span>
   </div>
-  <div class="form-group">
+  <div class="form-group has-error">
     <input class="form-control" placeholder="weight" formControlName="weight">
-    <span 
+    <span class="text-danger" 
       *ngIf="!rosterForm.get('weight').valid && rosterForm.get('weight').touched"
     >
       Please enter a Player's weight
     </span>
   </div>
-  <div class="form-group">
+  <div class="form-group has-error">
     <input class="form-control" placeholder="DOB" formControlName="DOB">
-    <span 
+    <span class="text-danger" 
       *ngIf="!rosterForm.get('DOB').valid && rosterForm.get('DOB').touched"
     >
       Please enter a Player's Date Of Birth
     </span>
   </div>
-  <div class="form-group">
+  <div class="form-group has-error">
     <input class="form-control" placeholder="PPG" formControlName="playoffPPG">
-    <span 
+    <span class="text-danger" 
       *ngIf="!rosterForm.get('playoffPPG').valid && rosterForm.get('playoffPPG').touched"
     >
       Please enter a Player's Points Per Game
     </span>
   </div>
-  <div class="form-group">
+  <div class="form-group has-error">
     <input class="form-control" placeholder="RPG" formControlName="playoffRPG">
-    <span 
+    <span class="text-danger" 
       *ngIf="!rosterForm.get('playoffRPG').valid && rosterForm.get('playoffRPG').touched"
     >
       Please enter a Player's Rebounds Per Game
     </span>
   </div>
-  <div class="form-group">
+  <div class="form-group has-error">
     <input class="form-control" placeholder="APG" formControlName="playoffAPG">
-    <span 
+    <span class="text-danger" 
       *ngIf="!rosterForm.get('playoffAPG').valid && rosterForm.get('playoffAPG').touched"
     >
       Please enter a Player's Assists Per Game
